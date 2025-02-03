@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálcula Troco</title>
+    <style>
+        button {
+            height: 100px;
+            width: 200px;
+            background-color: black;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.5em;
+            outline: none;
+            padding: 10px;
+            border-radius: 30px;
+        }
+
+        button:hover {
+            transition-duration: .5s;
+            background-color: rgba(0, 0, 0, 0.795);
+            outline: none;
+        }
+    </style>
 </head>
 <body>
-
     <h1>Calculando o Troco</h1>
     <button onclick="produto()">Comprar produto</button>
     
@@ -17,7 +35,12 @@
             let valor = window.prompt(`Quanto custa o(a) ${produto1} que você está comprando?`);
             let paguei = window.prompt(`Qual foi o valor que você deu para pagar o(a) ${produto1}?`);
 
-            
+            let n1 = parseInt(paguei);
+            let n2 = parseInt(valor);
+            let resto = n1 - n2;
+
+            troco = window.alert(`Você comprou ${produto1} que custou R$${valor}\nDeu R$${paguei} em dinheiro e vai receber R$${resto} de troco.\nVolte Sempre!`);
+
         }
 
     </script>
