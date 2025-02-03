@@ -37,7 +37,7 @@
 
             let n1 = parseInt(paguei);
             let n2 = parseInt(valor);
-            let resto = n1 - n2;
+            let resto = (n1 - n2).toFixed(2).replace(".", ",").concat(".");
 
             troco = window.alert(`Você comprou ${produto1} que custou R$${valor}\nDeu R$${paguei} em dinheiro e vai receber R$${resto} de troco.\nVolte Sempre!`);
 
