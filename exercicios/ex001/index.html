@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste Idiomas</h1>
+    Qual idioma você fala? <input type="text" name="idioma" id="idioma">
+    <input type="button" value="verificar" onclick="vericacao()">
+    <div id="resultado">
+
+    </div>
+    <script>
+
+        function vericacao() {
+            var idioma = window.document.getElementById('idioma')
+            var resultado = window.document.getElementById('resultado')
+            var res_idioma = String(idioma.value)
+
+            if ( res_idioma == 'Portugues') {
+                resultado.innerHTML += '<p>Você fala português</p>'
+            } else {
+                resultado.innerHTML += '<p>Você não fala português</p>' 
+            }
+
+        }
+
+    </script>
+</body>
+</html>
