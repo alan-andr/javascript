@@ -35,8 +35,8 @@
             let valor = window.prompt(`Quanto custa o(a) ${produto1} que você está comprando?`);
             let paguei = window.prompt(`Qual foi o valor que você deu para pagar o(a) ${produto1}?`);
 
-            let n1 = parseInt(paguei);
-            let n2 = parseInt(valor);
+            let n1 = Number(paguei);
+            let n2 = Number(valor);
             let resto = (n1 - n2).toFixed(2).replace(".", ",").concat(".");
 
             troco = window.alert(`Você comprou ${produto1} que custou R$${valor}\nDeu R$${paguei} em dinheiro e vai receber R$${resto} de troco.\nVolte Sempre!`);
